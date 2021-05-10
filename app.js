@@ -2,7 +2,7 @@ const express = require("express");
 const hbs = require("hbs");
 const app = express();
 const path = require("path");
-const path11 = process.env.PORT || 8080
+const port = process.env.PORT || 8080
 app.use(express.static('views/images'));
 app.set("view engine","hbs");
 app.get("/",(req,res)=>{
@@ -12,6 +12,6 @@ app.get("*",(req,res)=>{
     
    res.write("erroe!!");
 });
-app.listen(port11,()=>{
+app.listen(port,()=>{
     console.log("listen");
 });
